@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="left">
+            <b>Berlin Wall Project</b>
+        </div>
+        <div class="middle">
+            <a href="#intro" class="introNavItem">Intro</a>
+            <a href="#data" class="dataNavItem">Data</a>
+            <a href="#aboutMe" class="aboutNavItem">About Me</a>
+        </div>
+        <div class="right">
+            <a href="https://www.markveksler.com/" target="_blank">Other Work</a>
+        </div>
+    </header>
+    <div class="hero">
+        <section id="intro" class="about-me-content">
+            <div class="hero-text">
+                <p>Components of the <strong>The Berlin Wall</strong> has been scattered around the world.</p>
+                <p><em>I aim to bring the pieces back together to share a single story of a divided city.</em></p>
+            </div>
+            <div class="hero img">
+                <img src="los-angeles-ca-usa-april-17-2022-a-ten-piece-section-of-the-berlin-wall-is-exhibited-as-public-art-on-wilshire-boulevard-in-los-angeles-ca-2J5378K.jpg"
+                    alt="Berlin Wall Art">
+            </div>
+        </section>
+    </div>
+
+    <div id="data" class="title">
+        <h1>Berlin Wall Global Locations</h1>
+    </div>
+    <section class="data-viz">
+
+        <div class="data-viz-contnet">
+            <!-- <div id="myContainer2D">
+                <script src="sketch2D.js"></script>
+            </div> -->
+            <div id="myContainer3D">
+                <script src="sketch_ray4.js"></script>
+
+            </div>
+            <p id="infoText">Use RIGHT ARROW to select a random location and LEFT ARROW to list through previous
+                selections.
+                info.<br>Title:<br>Location:<br>Segment:<br></p>
+            <p id="howToUse">Use mouse to navigate around the globe to view locations where the part of the Berlin Wall
+                are located.</p>
+        </div>
+    </section>
+    <section class="about-me">
+        <div id="aboutMe" class="title">
+            <h1>About Me</h1>
+        </div>
+        <div class="about-me-content">
+            <text>I am working on this and that doing all sorts of cool things here and there.</text>
+            <img src="Profile_Photo.jpg" alt="Berlin Wall Art">
+        </div>
+    </section>
+</body>
+
+</html>

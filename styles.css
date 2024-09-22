@@ -1,0 +1,646 @@
+body {
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    background-color: white;
+    color: white;
+    /* width: 100%; */
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    /* Prevent horizontal scrollbars */
+}
+
+/* Search */
+/* Basic styles */
+
+
+h1 {
+    text-align: center;
+}
+
+
+/* Enhance the search input styles */
+#searchInput {
+    width: 100%;
+    /* Use full width for better mobile UX */
+    max-width: 500px;
+    /* Add a max width for larger screens */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    /* Add border for better visuals */
+    box-sizing: border-box;
+    /* Ensure the padding is inside the width */
+}
+
+#searchInputContainer {
+    background-color: white;
+    align-items: center;
+
+}
+
+/* Enhance the style of the expand/collapse button to match the search button */
+.expand-btn {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff;
+    /* Same color as search button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    /* Space between the card content and button */
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    /* Smooth hover transition */
+}
+
+.expand-btn:hover {
+    background-color: #0056b3;
+    /* Slightly darker shade for hover effect */
+}
+
+/* Add styles for the card details section */
+.details {
+    padding: 10px;
+    background-color: #f1f1f1;
+    /* Light background for details */
+    border-top: 1px solid #ccc;
+    /* Border separating the details */
+    display: none;
+    /* Hidden by default */
+}
+
+
+/* Carousel container */
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin-top: 20px;
+    cursor: grab;
+    padding-bottom: 30px;
+}
+
+
+/* Remove the default scrollbars on the carousel */
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-container {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Individual card styling */
+
+/* Improve card design */
+.card {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    /* Rounded corners */
+    width: 250px;
+    /* Fixed width for all cards */
+    flex: 0 0 auto;
+    /* Prevent flexbox from changing card size */
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(100, 100, 100, 0.2);
+}
+
+/* Scroll buttons */
+#searchButton {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff;
+    /* Same as scroll buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    /* Align to the right of the input box */
+    vertical-align: middle;
+}
+
+
+
+
+.scroll-btn {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+}
+
+/* Results count */
+#resultsCount {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Navigation bar Items */
+/* NAV BAR Items to be included here */
+/* Base navbar */
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.navbar .left,
+.navbar .middle,
+.navbar .right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .left {
+    flex: 1;
+    padding-left: 6vh;
+    color: white;
+}
+
+.navbar .middle {
+    flex: 2;
+    justify-content: center;
+}
+
+.navbar .middle a {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .right {
+    flex: 1;
+    justify-content: flex-end;
+    padding-right: 6vh;
+    /* border-radius: 3px;
+    border-color: red; */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+.navbar .middle a {
+    margin: 0 10px;
+}
+
+.icon {
+    display: none;
+}
+
+/* Title Class */
+.title {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: right;
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* Align items at the top */
+    justify-content: space-between;
+    /* Distribute space between items */
+    background-color: black;
+    color: white;
+    width: 100vw;
+    /* Full viewport width */
+    margin: 0;
+    margin-top: 50px;
+    /* Remove default margins */
+    padding: 20px;
+    /* Add some padding around the container */
+    box-sizing: border-box;
+    /* Include padding and border in total width */
+}
+
+/* Ensure hero-text and img are flex items */
+.hero .hero-text,
+.hero img {
+    padding: 0;
+    /* Remove excess padding */
+    margin: 0;
+    /* Remove any additional margins */
+    box-sizing: border-box;
+    /* Include padding/border in total width */
+}
+
+/* Adjust hero-text styles */
+.hero .hero-text {
+    width: 30%;
+    /* Adjust width for more space */
+    text-align: right;
+    /* Align text to the right */
+    font-size: 20pt;
+    flex-grow: 1;
+    margin-left: 25%;
+    /* Allow text to grow and take up available space */
+    align-self: center;
+    /* Center text vertically within its container */
+}
+
+/* Adjust image styles */
+.hero img {
+    width: auto;
+    /* Allow natural width */
+    max-width: 250px;
+    /* Restrict maximum width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-left: 20px;
+    /* Space between image and text */
+    flex-shrink: 0;
+    /* Prevent shrinking beyond natural size */
+    align-self: flex-start;
+    /* Align image to the top */
+}
+
+
+
+
+
+/* Data Viz Section */
+.data-viz {
+    background-color: white;
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5vh 0vh;
+}
+
+#data-viz-title {
+    background-color: black;
+    color: white;
+}
+
+.data-viz-contnet {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.data-viz-contnet img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* About Me Section */
+/* TITLE */
+#aboutMe {
+    background-color: white;
+    color: black;
+
+}
+
+#infoText {
+    display: flex;
+    width: 600pt;
+    justify-content: center;
+}
+
+#howToUse {
+    display: flex;
+    width: 600pt;
+    justify-content: left;
+}
+
+#howToUse2 {
+    display: flex;
+    width: 600pt;
+    justify-content: left;
+}
+
+/* Content */
+.about-me {
+    background-color: white;
+    color: black;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    /* height: 50vh; */
+
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.about-me text {
+    flex-direction: column;
+    width: 200px;
+    text-align: right;
+    line-height: 1.6;
+    font-size: 16pt;
+}
+
+.about-me img {
+    display: flex;
+    align-items: left;
+    width: 200px;
+    padding: 5vh;
+}
+
+/* P5.js container */
+#myContainer2D {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+#myContainer3D {
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 750px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar .middle a {
+        display: none;
+    }
+
+    .navbar.responsive .middle {
+        display: block;
+        position: absolute;
+        top: 80px;
+        /* Adjust based on the height of your navbar */
+        width: 100%;
+        background-color: #333;
+        z-index: 9999;
+    }
+
+    .navbar.responsive .middle a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid #444;
+    }
+
+    /* Hamburger icon visible only on small screens */
+    .navbar .icon {
+        display: block;
+        color: white;
+        padding: 8px 16px;
+        cursor: pointer;
+    }
+
+
+    /* Hide hamburger icon on larger screens */
+    .icon {
+        display: block;
+        color: white;
+        padding: 8px 16px;
+        cursor: pointer;
+    }
+
+    /* Show the mobile navbar links */
+    .navbar.responsive .middle {
+        display: block;
+    }
+
+    .navbar.responsive .middle a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid #444;
+    }
+
+    /* Lighter background for "Other Work" link */
+    .navbar.responsive .middle a.otherWorkNavItem {
+        background-color: #444;
+        /* Slightly lighter background */
+        color: white;
+    }
+
+    /* Hover effect for "Other Work" */
+    .navbar.responsive .middle a.otherWorkNavItem:hover {
+        background-color: #555;
+        /* Slightly darker on hover */
+    }
+
+    .about-me-content {
+        display: flex;
+        /* Ensure items are in a row */
+        align-items: center;
+        /* Vertically center the items */
+        justify-content: space-between;
+        /* Add space between items */
+        padding: 0 20px;
+        /* Adjust padding to create space around the content */
+        margin: 0 auto;
+        /* Prevent items from wrapping to a new line */
+        flex-direction: row;
+        text-align: right;
+    }
+
+    #about-me-layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-me text {
+        width: 30%;
+        /* Adjust width to ensure both items fit in a row */
+        font-size: 12pt;
+        /* Reduce font size slightly if necessary */
+        text-align: left;
+        /* Align text to the left */
+        margin-bottom: 0;
+        /* Remove bottom margin to prevent overflow */
+    }
+
+    .about-me img {
+        width: 30%;
+        /* Ensure image fits next to text */
+        max-width: 100px;
+        /* Set a max-width to control the image size */
+        margin-left: 10px;
+        /* Add some space between the text and image */
+    }
+
+    /* Hero section adjustments */
+    .hero {
+        margin-top: 50px;
+        /* display: flex; */
+        /* flex-direction: row; */
+        /* align-items: center; */
+        justify-content: space-between;
+        text-align: right;
+        padding: 10px;
+    }
+
+    .hero .hero-text {
+        width: 60%;
+        /* Adjusted width for text */
+        text-align: right;
+        font-size: 16pt;
+        padding-right: 10px;
+        padding: 0%;
+        margin: 0;
+        /* Add some space between text and image */
+    }
+
+    .hero img {
+        width: 100%;
+        /* Adjusted width for the image */
+        max-width: 100px;
+        /* Limit max-width to prevent overflow */
+        margin-top: 0;
+        padding: 0%;
+        margin: 0;
+        /* Remove any top margin to align with text */
+    }
+
+    /* About Me section adjustments */
+
+
+    .about-me text {
+        width: 100%;
+        font-size: 14pt;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .about-me img {
+        width: 100%;
+        max-width: 250px;
+        margin-top: 15px;
+    }
+
+    /* General adjustments */
+    h1 {
+        font-size: 24px;
+    }
+
+    #searchInput,
+    #searchButton {
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .carousel-container {
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        padding: 10px;
+        position: relative;
+        /* For absolute positioning of buttons */
+    }
+
+    /* Left scroll button */
+    .scroll-btn-left {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .scroll-btn {
+        display: none;
+    }
+
+    /* Right scroll button */
+    .scroll-btn-right {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    /* Individual card styling for smaller screens */
+    .card {
+        flex: 0 0 100%;
+        margin: 20px 0;
+        max-width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media only screen and (min-width: 751px) {
+    .otherWorkNavItem {
+        display: none;
+    }
+}
+
+/* Hide hamburger icon on larger screens */
+.icon {
+    display: none;
+    /* Hide by default */
+}
